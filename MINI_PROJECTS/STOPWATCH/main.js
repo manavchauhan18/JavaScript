@@ -7,9 +7,13 @@ const M = document.getElementById("minutes");
 const S = document.getElementById("seconds");
 
 const RecordList = document.getElementById("list");
-
+const LapB = document.getElementById("LapButton");
 
 stopTime = true;
+
+if(stopTime) {
+    LapB.disabled = true;
+}
 
 function StartTimer() {
     if (stopTime == true) {
@@ -29,6 +33,7 @@ function ResetTimer() {
     H.innerHTML = '00';
     M.innerHTML = '00';
     S.innerHTML = '00';
+    LapB.disabled = true;
 
     hr = 0;
     min = 0;
@@ -46,6 +51,7 @@ function ResetTimer() {
 function TimeCycle() {
 
     if (stopTime == false) {
+        LapB.disabled = false;
         hr = parseInt(hr);
         min = parseInt(min);
         sec = parseInt(sec);
@@ -92,6 +98,8 @@ function recordlap() {
     const child = document.createElement("LI");  
     child.style.listStyleType = "none";  
     child.style.paddingBottom = "0.3rem";
+    child.style.paddingLeft = "-36px";
+
     RecordList.appendChild(child);
 
     child.innerHTML = record_hr + ":" + record_min + ":" + record_sec;
@@ -100,3 +108,5 @@ function recordlap() {
     record_min = 0;
     record_sec = 0;
 }
+
+child.style.borderradius = "0.7rem";

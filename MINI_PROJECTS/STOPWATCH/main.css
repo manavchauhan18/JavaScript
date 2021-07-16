@@ -9,3 +9,45 @@
     border-radius: 20px;
 }
 
+.LapRecord {
+    padding-top: 0.5rem;
+}
+
+.title {
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: 90px;
+}
+
+.MainWatch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stopwatch {
+    border: 3px solid #198754;
+    width: 340px;
+    border-radius: 5px;
+    font-size: 60px;
+}
+
+#stopwatch:hover {
+    background-color: #198754;
+    color: white;
+}
+
+.LapList h2{
+    font-size: 42px;
+}
+
+.LapList ul{
+    height: 200px;
+    width: 32%;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+}
